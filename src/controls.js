@@ -100,4 +100,4 @@ const lightControl = event =>
   updateLightPosition()
 }
 
-export { drag, startDrag, stopDrag, lightControl }
+export { drag, startDrag, stopDrag, zoom, lightControl }

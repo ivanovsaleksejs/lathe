@@ -2,7 +2,7 @@ import Element from 'element'
 import * as THREE from 'three'
 import state from '../state.js'
 import { initRenderer, animate, updateShape, applyTexture } from '../lathe.js'
-import { drag, startDrag, stopDrag, lightControl } from '../controls.js'
+import { drag, startDrag, stopDrag, zoom, lightControl } from '../controls.js'
 
 class Lathe extends Element
 {
@@ -35,7 +35,8 @@ class Lathe extends Element
     mousedown: startDrag,
     mouseup: stopDrag,
     mousemove: drag,
-    keydown: lightControl
+    keydown: lightControl,
+    wheel: zoom
   }
 
   postRender = {
